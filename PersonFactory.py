@@ -210,7 +210,7 @@ class PersonFactory:
             first_birth = birth_year + 25
 
         if num_children <= 0:
-            return 0
+            return []
 
         if num_children == 1:
             birth_variation = 0
@@ -254,7 +254,7 @@ class PersonFactory:
         if partner is not None:
             new_person.set_partner(partner)
 
-        if children != 0:
+        if children:
             for child in children:
                 new_person.add_child(child)
                 if partner is not None:

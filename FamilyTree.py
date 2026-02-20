@@ -53,7 +53,7 @@ class FamilyTree:
                         self.people.append(partner)
 
                     children = self.person_factory.generate_children(person.get_year_born(), person.get_partner(), person.get_last_name())
-                    if children != 0:
+                    if children:
                         for child in children:
                             person.add_child(child)
                             next_gen.append(child)
